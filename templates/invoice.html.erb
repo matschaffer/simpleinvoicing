@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Invoice #: <%= number %></title>
+    <%= stylesheet "simplypro" %>
+  </head>
+  <body>
+    <div id="number">
+      Invoice #: <%= number %>
+    </div>
+    <div id="addresses">
+      <p>From:</p>
+      <div id="from" class="vcard">
+        <%= from %>
+      </div>
+      <p>To:</p>
+      <div id="to" class="vcard">
+        <%= to %>
+      </div>      
+    </div>
+    <table id="items">
+      <thead>
+        <th class="date">Date</th>
+        <th class="rate">Rate</th>
+        <th class="quantity">Quantity</th>
+        <th class="description">Description</th>
+      </thead>
+      <tbody>
+        <% for item in items %>
+          <tr>
+            <td class="date"><%= item.date %></td>
+            <td class="rate"><%= item.rate %></td>
+            <td class="quantity"><%= item.quantity %></td>
+            <td class="description"><%= item.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <dl id="totals">
+      <dt>Total Time</dt>
+      <dd><%= total_quantity %></dd>
+      <dt>Total Cost</dt>
+      <dd><%= total_cost %></dd>
+      <dt>Payment Due</dt>
+      <dd><%= due_date %></dd>
+    </dl>
+  </body>
+</html>

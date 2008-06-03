@@ -1,0 +1,84 @@
+body {
+  margin: 20px;
+  border: 2px solid #ddd;
+  font-family: sans-serif;
+  color: #999;
+  font-size: 10pt;
+  width: 20cm;
+  height: 25cm;
+}
+
+#number {
+  float: right;
+  margin: 20px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+#addresses {
+  padding: 30px 15px 20px;        
+}
+
+#addresses p {
+  margin: 20px 0 0 0;
+}
+
+.vcard {
+  padding-left: 10px;
+  color: #572;
+  font-weight: bold;
+}
+
+.vcard h2 {
+  margin: 0;
+  font-size: large;
+  color: #9d4;
+}
+
+table#items {
+  margin: 0;
+  background: #eee;
+  width: 100%;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  color: #444;
+  padding: 15px;
+  font-weight: bold;
+}
+
+table#items thead, table#items td.rate {
+  display: none;
+}
+
+table#items td.date {
+	width: 8em;
+}
+
+table#items td.quantity {
+	width: 3em;
+}
+
+table#items td {
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+dl#totals {
+  padding-left: 50%;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+dl#totals dt {
+  float: left;
+}
+
+dl#totals dt:after {
+  content: ":";
+}
+
+dl#totals dd {
+  padding-left: 6em;
+  color: black;
+}
